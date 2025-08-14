@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 import { Dot } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Page() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +21,20 @@ export default function Page() {
     { title: "Power" },
     { title: "Specs" },
   ];
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        closeMenu();
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("click", handleClick);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  });
 
   useGSAP(() => {
     gsap.registerPlugin(SplitText);
