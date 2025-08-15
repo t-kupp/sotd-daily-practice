@@ -7,7 +7,14 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   {
-    ignores: [".next/**", "out/**", "node_modules/**", ".git/**", "*.config.js", "*.config.mjs"],
+    ignores: [
+      ".next/**",
+      "out/**",
+      "node_modules/**",
+      ".git/**",
+      "*.config.js",
+      "*.config.mjs",
+    ],
   },
   ...compat.config({
     extends: [
