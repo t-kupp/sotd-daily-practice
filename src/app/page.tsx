@@ -19,6 +19,22 @@ export default function Home() {
         url: "https://symphonyofvines.unseen.co/",
       },
     },
+    {
+      day: 3,
+      title: "Fade-in text",
+      sodt: {
+        name: "Ethical Life",
+        url: "https://ethicallifeworld.com/",
+      },
+    },
+    {
+      day: 4,
+      title: "Images on mouse move",
+      sodt: {
+        name: "Inertia Studios",
+        url: "https://www.weareinertia.com/",
+      },
+    },
   ];
 
   return (
