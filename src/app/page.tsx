@@ -59,12 +59,12 @@ export default function Home() {
                   href={`/day${page.day}`}
                   className="w-full transition-opacity hover:opacity-50"
                 >
-                  <div className="flex w-full">
-                    <p className="w-1/5">
+                  <div className="flex w-full gap-4">
+                    <p>
                       {page.day < 10 && "0"}
                       {page.day}
                     </p>
-                    <p className="w-3/5">{page.title}</p>
+                    <p>{page.title}</p>
                   </div>
                 </Link>
                 <a
